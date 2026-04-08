@@ -1,61 +1,67 @@
-# COMP3133 Lab Test 2a - SpaceX Mission App
+<div align="center">
 
-## Student Information
-- Name: Heemal Syangbo
-- Student ID: 101532464
-- Course: COMP3133
+# 🚀 SpaceX Mission App  
+### COMP3133 Lab Test 2A  
 
-## App Description
-This Angular application consumes the public SpaceX REST API and displays mission data.  
-It includes a mission list, launch year filtering, and mission details pages.
+<p>
+  <b>Heemal Syangbo</b> &nbsp;|&nbsp;
+  Student ID: 101532464 &nbsp;|&nbsp;
+  COMP3133
+</p>
 
-## Features Implemented
-- Angular standalone app with routing
-- API integration with Angular `HttpClientModule`
-- `mission-list` component for all launches
-- `mission-filter` component with year filtering
-- `mission-details` component for selected mission details
-- TypeScript interface model for API data structure
-- Service layer (`SpacexApiService`) for API requests
-- Template control flow: `@for`, `@if`, `@switch`
-- Angular Signals for local state (`missions`, `loading`, `selectedYear`)
-- Forms support using `FormsModule` and `ReactiveFormsModule`
-- Basic UI design with Angular Material
+<p>
+  A modern Angular application that integrates with the <b>SpaceX REST API</b> to explore launch missions with filtering and detailed views.
+</p>
 
-## Technologies
-- Angular 21
-- TypeScript
-- Angular Material
-- SpaceX REST API: [https://api.spacexdata.com/v3/launches](https://api.spacexdata.com/v3/launches)
+<p>
+  🌐 <b>Live Application</b><br>
+  👉 https://101532464-comp3133-lab-test2.vercel.app/
+</p>
 
-## How to Run Locally
-1. Open terminal in project folder:
-   - `cd spacex-labtest2`
-2. Install dependencies:
-   - `npm install`
-3. Start development server:
-   - `npm start`
-4. Open browser:
-   - `http://localhost:4200`
+</div>
 
-## Build
-- Run production build:
-  - `npm run build`
+---
 
-## Screenshots (Add Before Submission)
-Add screenshots to a folder (example: `screenshots/`) and reference them here:
-- Running application
-- Mission list page
-- Filtered mission list by year
-- Mission details page
-- Code screenshots (components, service, API call)
+## 📌 Overview
+The <b>SpaceX Mission App</b> is a responsive Angular application built for <b>COMP3133 Lab Test 2A</b>.  
+It allows users to browse SpaceX launches, filter them by launch year, and view detailed mission information through a clean and intuitive interface.
 
-Example markdown:
-```md
-![Mission List](screenshots/mission-list.png)
-![Mission Details](screenshots/mission-details.png)
-```
+---
 
-## Deployment
-Deploy using Vercel or Render and add your live URL here before submission.
+## ✨ Core Features
+- 🚀 Display all SpaceX launch missions  
+- 🔍 Filter missions by launch year  
+- 📄 View detailed mission information  
+- ⚡ Fast and reactive UI using Angular Signals  
+- 🧩 Modular architecture with reusable components  
+- 🎨 Clean UI with Angular Material  
 
+---
+
+## 🛠️ Tech Stack
+- **Angular 21**
+- **TypeScript**
+- **Angular Material**
+- **RxJS**
+- **HTML5 & CSS3**
+
+🔗 API Used: https://api.spacexdata.com/v3/launches  
+
+---
+
+## 📂 Architecture
+- **mission-list** → Displays all missions  
+- **mission-filter** → Handles year-based filtering  
+- **mission-details** → Shows selected mission details  
+- **SpacexApiService** → Centralized API communication  
+- **mission.model.ts** → Type-safe data structure  
+
+---
+
+## ▶️ Run Locally
+```bash
+cd spacex-labtest2
+npm install
+npm start
+Open in browser:
+http://localhost:4200

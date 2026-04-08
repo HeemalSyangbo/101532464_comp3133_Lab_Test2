@@ -1,0 +1,53 @@
+<section>
+  <h2>{{ pageTitle() }}</h2>
+  <app-mission-filter (yearChanged)="onYearChanged($event)" />
+
+  @if (loading()) {
+    <div class="loading">
+      <mat-spinner diameter="48" />
+    </div>
+  } @else if (missions().length === 0) {
+    <p>No missions found for the selected filter.</p>
+  } @else {
+    <div class="mission-grid">
+      @for (mission of missions(); track mission.flight_number) {
+        <mat-card class="mission-card">
+          @if (mission.links.mission_patch_small) {
+            <img
+              mat-card-image
+              [src]="mission.links.mission_patch_small"
+              [alt]="mission.mission_name"
+            />
+          }
+
+          <mat-card-header>
+            <mat-card-title>{{ mission.mission_name }}</mat-card-title>
+            <mat-card-subtitle>Flight #{{ mission.flight_number }}</mat-card-subtitle>
+          </mat-card-header>
+
+          <mat-card-content>
+            <p><strong>Launch Year:</strong> {{ mission.launch_year }}</p>
+
+            @switch (mission.launch_success) {
+              @case (true) {
+                <p class="status success">Status: {{ mission.launch_success | launchStatus }}</p>
+              }
+              @case (false) {
+                <p class="status failed">Status: {{ mission.launch_success | launchStatus }}</p>
+              }
+              @default {
+                <p class="status unknown">Status: {{ mission.launch_success | launchStatus }}</p>
+              }
+            }
+          </mat-card-content>
+
+          <mat-card-actions>
+            <a mat-flat-button color="primary" [routerLink]="['/mission', mission.flight_number]">
+              View Details
+            </a>
+          </mat-card-actions>
+        </mat-card>
+      }
+    </div>
+  }
+</section>

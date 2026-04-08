@@ -1,0 +1,35 @@
+h2 {
+  margin: 0.5rem 0;
+}
+
+.loading {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.mission-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1rem;
+}
+
+.mission-card {
+  height: 100%;
+}
+
+.status {
+  font-weight: 600;
+}
+
+.success {
+  color: #2e7d32;
+}
+
+.failed {
+  color: #c62828;
+}
+
+.unknown {
+  color: #6d4c41;
+}
